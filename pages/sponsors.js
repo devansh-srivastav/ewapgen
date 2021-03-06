@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+import Link from 'next/link'
 import SponsorsGrid from '../components/sponsors_grid'
 
 export default function Sponsors(){

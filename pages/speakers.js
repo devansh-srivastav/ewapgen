@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+import Link from 'next/link'
 import SpeakerGrid from '../components/speaker_grid'
 
 export default function Speakers(){
