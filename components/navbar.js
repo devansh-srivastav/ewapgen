@@ -1,68 +1,66 @@
-import React from "react";
-import { Box, Heading, Flex, Text, Button } from "@chakra-ui/react";
-import Link from 'next/link'
+import React, { Component } from "react";
+import {
+    MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavbarToggler, MDBCollapse, MDBDropdown,
+    MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBFormInline
+} from "mdbreact";
+import Link from 'next/link';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
+import { Name } from '../lib/constants'
 
-const MenuItems = ({ children }) => (
-    <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
-        {children}
-    </Text>
-);
+class NavBar extends Component {
+    state = {
+        isOpen: false
+    };
 
-// Note: This code could be better, so I'd recommend you to understand how I solved and you could write yours better :)
-const NavBar = props => {
-    const [show, setShow] = React.useState(false);
-    const handleToggle = () => setShow(!show);
+    toggleCollapse = () => {
+        this.setState({ isOpen: !this.state.isOpen });
+    }
 
-    return (
-        <Flex
-            as="nav"
-            align="center"
-            justify="space-between"
-            wrap="wrap"
-            padding="1.5rem"
-            bg="black"
-            color="white"
-            {...props}
-        >
-            <Flex align="center" mr={5}>
-                <Heading as="h1" size="lg" letterSpacing={"-.1rem"}>
-                    Chakra UI
-        </Heading>
-            </Flex>
+    render() {
+        return (
+            <MDBNavbar className='navbar' color="black" dark expand="md">
+                <MDBNavbarBrand>
+                    <Link href='/'><a><strong className="white-text brand">{Name}</strong></a></Link>
+                </MDBNavbarBrand>
+                <MDBNavbarToggler onClick={this.toggleCollapse} />
+                <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+                    <MDBNavbarNav right>
+                        <MDBNavItem>
+                            <Link href="#!"><a className="nav-link">Schedule</a></Link>
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            <Link href="/speakers"><a className="nav-link">Speakers</a></Link>
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            <Link href="#!"><a className="nav-link">Sponsors</a></Link>
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            <Link href="#!"><a className="nav-link">Organizers</a></Link>
+                        </MDBNavItem>
+                        {/* <MDBNavItem>
+                            <MDBDropdown>
+                                <MDBDropdownToggle nav caret>
+                                    <span className="mr-2">Dropdown</span>
+                                </MDBDropdownToggle>
+                                <MDBDropdownMenu>
+                                    <MDBDropdownItem href="#!">Action</MDBDropdownItem>
+                                    <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
+                                    <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
+                                    <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
+                                </MDBDropdownMenu>
+                            </MDBDropdown>
+                        </MDBNavItem> */}
+                        <MDBNavItem>
+                            <Link href="#!"><a className="nav-link">Register</a></Link>
+                        </MDBNavItem>
+                    </MDBNavbarNav>
+                </MDBCollapse>
+            </MDBNavbar>
 
-            <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
-                <svg
-                    fill="white"
-                    width="12px"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                </svg>
-            </Box>
-
-            <Box
-                display={{ sm: show ? "block" : "none", md: "flex" }}
-                width={{ sm: "full", md: "auto" }}
-                alignItems="center"
-                flexGrow={1}
-            >
-                <Link href='/speakers'><a><MenuItems>Speakers</MenuItems></a></Link>
-
-            </Box>
-
-            <Box
-                display={{ sm: show ? "block" : "none", md: "block" }}
-                mt={{ base: 4, md: 0 }}
-            >
-                <Button bg="transparent" border="1px">
-                    Create account
-        </Button>
-            </Box>
-        </Flex>
-    );
-};
-
+        );
+    }
+}
 
 export default NavBar
