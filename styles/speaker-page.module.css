@@ -52,6 +52,14 @@
   margin-bottom: 30px;
 }
 
+.description{
+  color: var(--accents-2);
+  margin-top: 20px;
+  margin-right:30px;
+  margin-bottom: 30px;
+  padding-left:100px;
+  padding-right:100px;
+}
 .icon{
     margin-right:1px;
 }
@@ -96,6 +104,13 @@
   margin: 0;
   line-height: 1.2;
 }
+.eventname{
+  font-weight: 700;
+  color: #fff;
+  font-size: 56px;
+  margin: 0;
+  line-height: 1.2;
+}
 
 .company {
   color: #fff;
@@ -110,6 +125,11 @@
   margin-bottom: 24px;
   font-size: 20px;
 }
+.eventtitle{
+  margin-top:24px;
+  margin-bottom: 24px;
+  font-size: 30px;
+}
 
 .bio-header {
   font-size: 30px;
@@ -117,6 +137,11 @@
   color: #fff;
 }
 
+.description-header{
+  font-size: 30px;
+  letter-spacing: -0.0em;
+  color:var(--brand);
+}
 .socials-header {
   font-size: 24px;
   letter-spacing: -0.0em;
@@ -131,5 +156,3 @@
 .githubIcon {
   margin-left: var(--space-2x);
 }
-
-
