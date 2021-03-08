@@ -1,12 +1,19 @@
 import { useRouter } from 'next/router'
 import { Speakers } from '../../lib/speakers';
 import SpeakerAboutPage from '../../components/speaker_page'
+import { useEffect } from 'react'
 
 
 const SpeakerPage = () => {
     const router = useRouter()
     const { slug } = router.query
-    let speaker = Speakers.find(obj => obj.link === slug)
+    let speaker = Speakers.find(obj => obj.link === slug) || null
+
+    if (speaker === null) {
+        useEffect(() => {
+            router.push('/404')
+        }, [])
+    }
 
     return (
         <div>
