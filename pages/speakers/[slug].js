@@ -7,7 +7,6 @@ const SpeakerPage = () => {
     const router = useRouter()
     const { slug } = router.query
     let speaker = Speakers.find(obj => obj.link === slug)
-    console.log([slug])
 
     return (
         <div>
@@ -17,7 +16,11 @@ const SpeakerPage = () => {
                 imageUrl={speaker?.imageUrl}
                 title={speaker?.title}
                 company={speaker?.company}
-
+                bio={speaker?.bio}
+                talkTitle={speaker?.talkTitle}
+                talkDescription={speaker?.talkDescription}
+                email={speaker?.email}
+                twitter={speaker?.twitter}
             />
         </div>
     )

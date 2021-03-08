@@ -18,11 +18,17 @@
   font-weight: 500;
 }
 
+.handle{
+    color: var(--secondary-color);
+  padding: var(--space-8x) var(--space-4x) var(--space-4x) var(--space-4x);
+  font-weight: 500;
+}
+
 .backlink > svg {
   margin-right: var(--space-2x);
 }
 
-.backlink:hover {
+.backlink:hover, .handle:hover {
   color: #fff;
 }
 
@@ -42,7 +48,15 @@
 .bio {
   color: var(--accents-2);
   max-width: 800px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
+
+.icon{
+    margin-right:1px;
+}
+
+
 
 .image {
   border-radius: var(--space-2x);
@@ -99,13 +113,13 @@
 
 .bio-header {
   font-size: 30px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.0em;
   color: #fff;
 }
 
 .socials-header {
   font-size: 24px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.0em;
   color: #fff;
   margin-bottom: var(--space-4x);
 }

@@ -176,4 +176,15 @@ svg circle {
   align-items: center;
   text-align: center;
   color: var(--secondary-color);
+  margin-top: 50px;
+}
+
+.home-content{
+  align-items: center!important;
+  /* text-align: center!important; */
+  min-height: 10vh;
+}
+
+.event-title{
+  margin-top:200px;
 }
