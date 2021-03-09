@@ -1,6 +1,5 @@
 import styles from '../styles/speaker-page.module.css';
 import Link from 'next/link'
-import Image from 'next/Image'
 import { Name, Tagline, Description, Time, Venue } from '../lib/constants'
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
@@ -21,7 +20,7 @@ export default function Home() {
                     <p className={styles.description}>{Description}</p>
                     <h2 className={styles['description-header']}><strong>{Time} | {Venue}</strong></h2>
                     <div className='register-btn'>
-                        <Link href='/speakers'>
+                        <Link href='/register'>
                             <a className='linkButton'>
                                 <button type="button" className="btn btn-outline-light btn-lg">
                                     Register Now
@@ -33,7 +32,7 @@ export default function Home() {
             </div>
                     </MDBCol>
                 <MDBCol lg="4">
-                        <img src='/logo.png' className={styles.logo}
+                        <img src='/logo.png' height={350} className={styles.logo}
                      />
                 </MDBCol>
             </MDBRow>
