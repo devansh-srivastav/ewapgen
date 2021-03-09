@@ -1,5 +1,5 @@
 import styles from '../styles/speaker-page.module.css';
-import { MDBIcon, MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact'
+import { MDBIcon, MDBBtn, MDBInput } from 'mdbreact'
 import { Organizer as organizer } from '../lib/organizer'
 
 export default function ContactPage() {

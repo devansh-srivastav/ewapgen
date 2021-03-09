@@ -253,3 +253,11 @@ svg circle {
     box-shadow: 0 1px 0 0 var(--brand)!important;
     color: var(--secondary-color);
 }
+
+.link:hover{
+  color:#fff;
+}
+
+.dnd{
+  margin-right: 20px;
+}

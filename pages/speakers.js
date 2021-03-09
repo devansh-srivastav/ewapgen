@@ -5,7 +5,7 @@ export default function Speakers(){
     return(
         <div>
             <h2 className='page-title'><strong>Speakers</strong></h2>
-            <p className='page-sub-title'>Keynote and Distinguished Speakers jo bakwaas karke sabko bore karenge</p>
+            <p className='page-sub-title'>Our keynote and distinguished speakers for exciting and inpiring talks.</p>
             <SpeakerGrid />
         </div>
     )
