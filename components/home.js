@@ -33,7 +33,7 @@ export default function Home() {
                         </div>
                     </MDBCol>
                     <MDBCol lg="4">
-                        <img src='/logo.png' height={300} className={styles.logo}
+                        <img src='/logo.png' height={300} width={300} className={styles.logo}
                         />
                     </MDBCol>
                 </MDBRow>

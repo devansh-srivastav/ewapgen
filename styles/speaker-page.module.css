@@ -181,3 +181,11 @@
 .githubIcon {
   margin-left: var(--space-2x);
 }
+
+
+@media (max-width: 990px) {
+  .logo{
+    height: auto;
+    width:300px;
+  }
+}
